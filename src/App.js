@@ -88,7 +88,7 @@ class App extends Component {
         const result = await shapeshift.shift(this.state.receive, this.state.refund, pair);
         this.setState({deposit: result['deposit']});
         this.setState({show: true});
-        this.setState({successMessage: 'Click `Check transaction` below to see how it is going'});
+        this.setState({successMessage: 'Your deposit address: ' + this.state.deposit});
       } catch (err) {
         this.setState({errorMessage: err.message});
       }
